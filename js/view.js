@@ -92,6 +92,11 @@
 		});
 	};
 
+	/**
+	 * @description Moteur de template
+	 * @param {String} viewCmd Nom de la commande
+	 * @param {Object} parameter Todos
+	 */
 	View.prototype.render = function (viewCmd, parameter) {
 		var self = this;
 		var viewCommands = {
