@@ -68,6 +68,7 @@ describe('controller', function () {
 		subject.setView('');
 
 		expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
+		expect(view.render)
 	});
 
 	describe('routing', function () {
@@ -112,7 +113,7 @@ describe('controller', function () {
 			const todo = {
 				title: 'Aslan todo',
 				complete: true
-			}
+			};
 			setUpModel([todo]);
 			subject.setView('#/completed');
 
@@ -189,13 +190,13 @@ describe('controller', function () {
 	});
 
 	describe('toggle all', function () {
+		// Pour chaque test on passe toutes les todos en completed
+		const todo = [
+			{id:1, title: 'Aslan Todo', completed: false},
+			{id:2, title: 'Aslan Todo', completed: false},
+			{id:3, title: 'Aslan Todo', completed: false}
+		];
 		beforeEach(() => {
-			// Pour chaque test on passe toutes les todos en completed
-			const todo = [
-				{id:1, title: 'Aslan Todo', completed: false},
-				{id:2, title: 'Aslan Todo', completed: false},
-				{id:3, title: 'Aslan Todo', completed: false}
-			];
 
 			setUpModel(todo);
 
@@ -211,6 +212,8 @@ describe('controller', function () {
 				// Pour chaque todos on vérifie que elles sont completed
 				expect(model.update).toHaveBeenCalledWith(i, {completed:true}, jasmine.any(Function));
 			}
+			
+			expect(model.update).toHaveBeenCalledTimes(3);
 		});
 
 		it('should update the view', function () {
@@ -218,6 +221,7 @@ describe('controller', function () {
 			for(let i = 1; i<4; i++) {
 				expect(view.render).toHaveBeenCalledWith('elementComplete', {id: i, completed: true});
 			}
+			expect(view.render).toHaveBeenCalledTimes(3);
 		});
 	});
 
@@ -230,7 +234,6 @@ describe('controller', function () {
 
 			view.trigger('newTodo', 'Aslan todo');
 			expect(model.create).toHaveBeenCalledWith('Aslan todo', jasmine.any(Function));
-
 		});
 
 		it('should add a new todo to the view', function () {
