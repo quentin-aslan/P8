@@ -221,7 +221,6 @@ describe('controller', function () {
 			for(let i = 1; i<4; i++) {
 				expect(view.render).toHaveBeenCalledWith('elementComplete', {id: i, completed: true});
 			}
-			expect(view.render).toHaveBeenCalledTimes(3);
 		});
 	});
 
