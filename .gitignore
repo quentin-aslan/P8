@@ -5,3 +5,4 @@ package-lock.json
 node_modules/jasmine-core
 out/
 audit/
+conf.json
