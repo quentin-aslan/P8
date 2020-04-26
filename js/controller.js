@@ -183,7 +183,7 @@ Controller.prototype.removeCompletedItems = function () {
 /**
  * @desc Actualise la tâche en fonction de son status (Sur le DOM)
  * @param {number} id ID de la tâche
- * @param {object} completed Vérifie si le champ "completed" est vrais ou non
+ * @param {boolean} completed Vérifie si le champ "completed" est vrais ou non
  * @param {boolean|undefined} silent Empêche de filtrer une deuxième fois les éléments de la liste
  */
 Controller.prototype.toggleComplete = function (id, completed, silent) {
@@ -202,7 +202,7 @@ Controller.prototype.toggleComplete = function (id, completed, silent) {
 
 /**
  * @desc Active ou désactive les cases cochées
- * @param {String} completed Les tâches terminées
+ * @param {Boolean} completed Faux | Vrais (Faux : Tâches non complété, Vrais: Tâches complétées )
  */
 Controller.prototype.toggleAll = function (completed) {
 	var self = this;
@@ -250,6 +250,7 @@ Controller.prototype._filter = function (force) {
 
 /**
  * @desc Mets à jour l'url pour filtrer les tâches (/active, /completed)
+ * @param {string} currentPage Page courante
  */
 Controller.prototype._updateFilterState = function (currentPage) {
 	this._activeRoute = currentPage;

@@ -1,7 +1,8 @@
 
 /**
  * @constructor
- * @desc Crée un nouvel objet Store côté client et créera un espace vide si il n'éxiste pas
+ * @desc Base de données de l'application
+ * Crée un nouvel objet Store côté client et créera un espace vide si il n'éxiste pas
  * @param {string} name Nom de la base de données que nous voulons utiliser
  * @param {function} callback Fonction de callback (Si une base de donneé est utilisé alors nous utiliserons des appels AJAX)
  */

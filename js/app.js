@@ -1,6 +1,6 @@
 
 /**
- * Configure une nouvelle TodoList.
+ * Configure une nouvelle TodoList. (Instancie les autres classes)
  * @param {string} name Nom de la nouvelle TodoList
  * @constructor Todo
  */

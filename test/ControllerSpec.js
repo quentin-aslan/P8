@@ -68,7 +68,6 @@ describe('controller', function () {
 		subject.setView('');
 
 		expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
-		expect(view.render)
 	});
 
 	describe('routing', function () {
@@ -104,8 +103,6 @@ describe('controller', function () {
 
 			expect(model.read).toHaveBeenCalledWith({ completed: false }, jasmine.any(Function));
 			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
-
-
 		});
 
 		it('should show completed entries', function () {

@@ -21,7 +21,7 @@
 				}
 			}
 			return object;
-		};
+		}
 
 		// By default, Underscore uses ERB-style template delimiters, change the
 		// following template settings to use alternative delimiters.
@@ -136,7 +136,7 @@
 
 	function getFile(file, callback) {
 		if (!location.host) {
-			return null; //console.info('Miss the info bar? Run TodoMVC from a server to avoid a cross-origin error.');
+			return console.info('Miss the info bar? Run TodoMVC from a server to avoid a cross-origin error.');
 		}
 
 		var xhr = new XMLHttpRequest();

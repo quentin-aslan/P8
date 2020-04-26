@@ -1,8 +1,4 @@
-!node_modules/todomvc-app-css/index.css
+
 package-lock.json
-!node_modules/todomvc-common/base.js
-!node_modules/todomvc-common/base.css
-node_modules/jasmine-core
-out/
+node_modules/
 audit/
-conf.json

@@ -1,5 +1,7 @@
 # [Projet 8 - Reprenez et améliorez un projet existant](https://openclassrooms.com/fr/projects/58/assignment)
 
+![TodoList](http://quentin-aslan.site/oc/P8/accueil_todo.jpg)
+
 Le site est hébergé avec GitHubPage : [https://quentin-aslan.github.io/P8/](https://quentin-aslan.github.io/P8/)
 
 ## Sommaire
